@@ -48,7 +48,7 @@ public class EstacionamentoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(estacionamentoService.save(estacionamentoModelo));
     }
 
-    @GetMapping("/apartment")
+    @GetMapping("/apartment") //lista todas as vagas por apartamento
     public ResponseEntity<Object>  getAllVagasEstacionamentoPorApartamento(@RequestParam String apartment){
 
         List<EstacionamentoModel> litaVagasPorApartamento = estacionamentoService.findParkingSpotNumberByApartment(apartment);
